@@ -49,3 +49,21 @@ jobs:
           VALIDATE_TYPESCRIPT_STANDARD: false
           VALIDATE_TSX: false
           VALIDATE_TSX_PRETTIER: false
+
+  check-markdown-links:
+    name: Check Markdown links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check Markdown links
+        uses: UmbrellaDocs/action-linkspector@v1.2.2
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          config_file: .github/other-configurations/.linkspector.yml
+          reporter: github-pr-review
+          fail_on_error: true
+          filter_mode: nofilter
