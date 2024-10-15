@@ -1,0 +1,15 @@
+version: 2
+
+updates:
+  - package-ecosystem: "github-actions"
+    directories:
+      - "/"
+    commit-message:
+      prefix: "deps(github-actions)"
+    schedule:
+      interval: "daily"
+    target-branch: "main"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
