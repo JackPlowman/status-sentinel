@@ -17,6 +17,6 @@
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
     "pyproject.toml": "__init__.py, poetry.lock, coverage.xml, .coverage, .gitignore",
-    "package.json": "package-lock.json, .gitignore"
+    "package.json": "package-lock.json, eslint.config.js, .gitignore, tsconfig.json, vite.config.*"
   }
 }
