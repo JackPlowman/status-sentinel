@@ -34,3 +34,6 @@ updates:
       typescript:
         patterns:
           - "*"
+        update-types:
+          - "patch"
+          - "minor"
