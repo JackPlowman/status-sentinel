@@ -100,12 +100,13 @@ jobs:
   run-code-limit:
     name: Run Code Limit
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
       - name: "Run Code Limit"
         uses: getcodelimit/codelimit-action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
