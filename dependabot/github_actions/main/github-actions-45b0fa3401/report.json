@@ -1,0 +1,71 @@
+{
+  "version": "0.14.0",
+  "uuid": "52398ec1-fd2e-4cc6-8a9c-0a93d65b69bd",
+  "root": "/github/workspace",
+  "codebase": {
+    "totals": {
+      "JavaScript": {
+        "files": 1,
+        "lines_of_code": 27,
+        "functions": 0,
+        "hard_to_maintain": 0,
+        "unmaintainable": 0
+      },
+      "TypeScript": {
+        "files": 2,
+        "lines_of_code": 6,
+        "functions": 0,
+        "hard_to_maintain": 0,
+        "unmaintainable": 0
+      }
+    },
+    "tree": {
+      "./": {
+        "entries": [
+          "dashboard/"
+        ],
+        "profile": [0, 0, 0, 0]
+      },
+      "dashboard/": {
+        "entries": [
+          "eslint.config.js",
+          "vite.config.ts",
+          "src/"
+        ],
+        "profile": [0, 0, 0, 0]
+      },
+      "dashboard/src/": {
+        "entries": [
+          "vite-env.d.ts"
+        ],
+        "profile": [0, 0, 0, 0]
+      }
+    },
+    "files": {
+      "dashboard/eslint.config.js": {
+        "checksum": "6682a8c81de9e3820ddd5b11b227b999",
+        "language": "JavaScript",
+        "loc": 27,
+        "profile": [0, 0, 0, 0],
+        "measurements": [
+        ]
+      },
+      "dashboard/vite.config.ts": {
+        "checksum": "57c186735e3c1449ac0f8121572bab13",
+        "language": "TypeScript",
+        "loc": 5,
+        "profile": [0, 0, 0, 0],
+        "measurements": [
+        ]
+      },
+      "dashboard/src/vite-env.d.ts": {
+        "checksum": "0352474ba2918efe13895edbc3780d94",
+        "language": "TypeScript",
+        "loc": 1,
+        "profile": [0, 0, 0, 0],
+        "measurements": [
+        ]
+      }
+    }
+  }
+}
