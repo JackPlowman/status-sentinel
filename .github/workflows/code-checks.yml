@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0
       # Lint and Format everything but Python/JavaScript/TypeScript
       - name: Lint Code Base
-        uses: super-linter/super-linter/slim@v7.1.0
+        uses: super-linter/super-linter/slim@v7.2.1
         env:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
@@ -90,12 +90,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3.27.5
+        uses: github/codeql-action/init@v3.27.9
         with:
           languages: ${{ matrix.language }}
           queries: security-and-quality
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3.27.5
+        uses: github/codeql-action/analyze@v3.27.9
 
   run-code-limit:
     name: Run CodeLimit
