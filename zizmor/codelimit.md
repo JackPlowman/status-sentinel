@@ -1,0 +1,9 @@
+## Codebase totals
+| **Language** | **Files** | **Lines of Code** | **Functions** | ⚠ | ✖ |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| JavaScript | 1 | 27 | 0 | 0 | 0 |
+| TypeScript | 2 | 6 | 0 | 0 | 0 |
+| **Totals** | **3** | **33** | **0** | **0** | **0** |
+
+## Refactoring report
+Refactoring not necessary, ✨ happy coding! ✨
