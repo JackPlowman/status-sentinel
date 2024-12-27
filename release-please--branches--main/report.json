@@ -1,19 +1,25 @@
 {
-  "version": "0.14.1",
-  "uuid": "afb0ee42-dd87-4f7d-ad94-36f7f12b3650",
+  "version": "0.16.0",
+  "uuid": "1fe2f196-7bb1-4c50-a94c-db8622d722a5",
+  "timestamp": "2024-12-27T21:48:26+00:00",
   "root": "/github/workspace",
+  "repository": {
+    "owner": "JackPlowman",
+    "name": "status-sentinel",
+    "branch": "HEAD"
+  },
   "codebase": {
     "totals": {
       "JavaScript": {
         "files": 1,
-        "lines_of_code": 27,
+        "lines_of_code": 0,
         "functions": 0,
         "hard_to_maintain": 0,
         "unmaintainable": 0
       },
       "TypeScript": {
         "files": 2,
-        "lines_of_code": 6,
+        "lines_of_code": 0,
         "functions": 0,
         "hard_to_maintain": 0,
         "unmaintainable": 0
@@ -45,7 +51,7 @@
       "dashboard/eslint.config.js": {
         "checksum": "6682a8c81de9e3820ddd5b11b227b999",
         "language": "JavaScript",
-        "loc": 27,
+        "loc": 0,
         "profile": [0, 0, 0, 0],
         "measurements": [
         ]
@@ -53,7 +59,7 @@
       "dashboard/vite.config.ts": {
         "checksum": "57c186735e3c1449ac0f8121572bab13",
         "language": "TypeScript",
-        "loc": 5,
+        "loc": 0,
         "profile": [0, 0, 0, 0],
         "measurements": [
         ]
@@ -61,7 +67,7 @@
       "dashboard/src/vite-env.d.ts": {
         "checksum": "0352474ba2918efe13895edbc3780d94",
         "language": "TypeScript",
-        "loc": 1,
+        "loc": 0,
         "profile": [0, 0, 0, 0],
         "measurements": [
         ]
