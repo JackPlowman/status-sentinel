@@ -1,6 +1,7 @@
 {
-  "version": "0.15.1",
-  "uuid": "c54d9ce7-b57a-4f6f-8e17-989e20347e31",
+  "version": "0.16.0",
+  "uuid": "26e462fd-ce96-4692-b6d4-54dbececc678",
+  "timestamp": "2024-12-28T01:28:12+00:00",
   "root": "/github/workspace",
   "repository": {
     "owner": "JackPlowman",
@@ -11,14 +12,14 @@
     "totals": {
       "JavaScript": {
         "files": 1,
-        "lines_of_code": 27,
+        "lines_of_code": 0,
         "functions": 0,
         "hard_to_maintain": 0,
         "unmaintainable": 0
       },
       "TypeScript": {
         "files": 2,
-        "lines_of_code": 6,
+        "lines_of_code": 0,
         "functions": 0,
         "hard_to_maintain": 0,
         "unmaintainable": 0
@@ -50,7 +51,7 @@
       "dashboard/eslint.config.js": {
         "checksum": "6682a8c81de9e3820ddd5b11b227b999",
         "language": "JavaScript",
-        "loc": 27,
+        "loc": 0,
         "profile": [0, 0, 0, 0],
         "measurements": [
         ]
@@ -58,7 +59,7 @@
       "dashboard/vite.config.ts": {
         "checksum": "57c186735e3c1449ac0f8121572bab13",
         "language": "TypeScript",
-        "loc": 5,
+        "loc": 0,
         "profile": [0, 0, 0, 0],
         "measurements": [
         ]
@@ -66,7 +67,7 @@
       "dashboard/src/vite-env.d.ts": {
         "checksum": "0352474ba2918efe13895edbc3780d94",
         "language": "TypeScript",
-        "loc": 1,
+        "loc": 0,
         "profile": [0, 0, 0, 0],
         "measurements": [
         ]
