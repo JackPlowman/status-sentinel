@@ -83,19 +83,25 @@ jobs:
   run-codeql-analysis:
     name: CodeQL Analysis
     runs-on: ubuntu-latest
+    permissions:
+      statuses: write
+      security-events: write
     strategy:
       matrix:
-        language: [javascript]
+        language: [typescript, actions]
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3.27.5
+        uses: github/codeql-action/init@v3.28.1
         with:
           languages: ${{ matrix.language }}
           queries: security-and-quality
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3.27.5
+        uses: github/codeql-action/analyze@v3.28.1
 
   run-code-limit:
     name: Run CodeLimit
@@ -131,7 +137,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v3.27.9
+        uses: github/codeql-action/upload-sarif@v3.28.1
         with:
           sarif_file: results.sarif
           category: zizmor
