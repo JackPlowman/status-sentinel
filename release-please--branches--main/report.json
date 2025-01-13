@@ -1,12 +1,12 @@
 {
-  "version": "0.17.0",
-  "uuid": "d4582f8d-0f1a-47df-9720-f86a64bf8f07",
-  "timestamp": "2025-01-01T13:41:53+00:00",
+  "version": "0.18.1",
+  "uuid": "23e2a10d-7888-478b-83fa-918872e47bb3",
+  "timestamp": "2025-01-13T21:14:20+00:00",
   "root": "/github/workspace",
   "repository": {
     "owner": "JackPlowman",
     "name": "status-sentinel",
-    "branch": "HEAD"
+    "branch": "release-please--branches--main"
   },
   "codebase": {
     "totals": {
