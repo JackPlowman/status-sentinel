@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+ 
 /** @type {import('tailwindcss').Config} */
 
 import defaultTheme from "tailwindcss/defaultTheme";
