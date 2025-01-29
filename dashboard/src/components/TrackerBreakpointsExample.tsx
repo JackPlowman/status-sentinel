@@ -1,4 +1,4 @@
-import { Tracker } from "./Tracker"
+import { Tracker } from "./Tracker";
 
 const data = [
   // array-start
@@ -84,7 +84,7 @@ const data = [
   { color: "bg-emerald-600", tooltip: "Tracker Info" },
   { color: "bg-emerald-600", tooltip: "Tracker Info" },
   // array-end
-]
+];
 
 export const TrackerBreakpointsExample = () => (
   <>
@@ -95,4 +95,4 @@ export const TrackerBreakpointsExample = () => (
     />
     <Tracker className="flex w-full sm:hidden" data={data.slice(0, 30)} />
   </>
-)
+);

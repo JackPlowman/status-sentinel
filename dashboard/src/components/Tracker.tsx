@@ -1,16 +1,16 @@
 // Tremor Tracker [v0.1.3]
 
-import React from "react"
-import * as HoverCardPrimitives from "@radix-ui/react-hover-card"
+import React from "react";
+import * as HoverCardPrimitives from "@radix-ui/react-hover-card";
 
-import { cx } from "../lib/utils"
+import { cx } from "../lib/utils";
 
 interface TrackerBlockProps {
-  key?: string | number
-  color?: string
-  tooltip?: string
-  hoverEffect?: boolean
-  defaultBackgroundColor?: string
+  key?: string | number;
+  color?: string;
+  tooltip?: string;
+  hoverEffect?: boolean;
+  defaultBackgroundColor?: string;
 }
 
 const Block = ({
@@ -19,7 +19,7 @@ const Block = ({
   defaultBackgroundColor,
   hoverEffect,
 }: TrackerBlockProps) => {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
   return (
     <HoverCardPrimitives.Root
       open={open}
@@ -58,15 +58,15 @@ const Block = ({
         </HoverCardPrimitives.Content>
       </HoverCardPrimitives.Portal>
     </HoverCardPrimitives.Root>
-  )
-}
+  );
+};
 
-Block.displayName = "Block"
+Block.displayName = "Block";
 
 interface TrackerProps extends React.HTMLAttributes<HTMLDivElement> {
-  data: TrackerBlockProps[]
-  defaultBackgroundColor?: string
-  hoverEffect?: boolean
+  data: TrackerBlockProps[];
+  defaultBackgroundColor?: string;
+  hoverEffect?: boolean;
 }
 
 const Tracker = React.forwardRef<HTMLDivElement, TrackerProps>(
@@ -95,10 +95,10 @@ const Tracker = React.forwardRef<HTMLDivElement, TrackerProps>(
           />
         ))}
       </div>
-    )
+    );
   },
-)
+);
 
-Tracker.displayName = "Tracker"
+Tracker.displayName = "Tracker";
 
-export { Tracker, type TrackerBlockProps }
+export { Tracker, type TrackerBlockProps };
