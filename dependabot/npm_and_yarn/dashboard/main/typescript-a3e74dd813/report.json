@@ -1,0 +1,122 @@
+{
+  "version": "0.18.1",
+  "uuid": "0539d255-56e9-40b1-a314-6a9946f5f00d",
+  "timestamp": "2025-01-29T21:15:34+00:00",
+  "root": "/github/workspace",
+  "repository": {
+    "owner": "JackPlowman",
+    "name": "status-sentinel",
+    "branch": "dependabot/npm_and_yarn/dashboard/main/typescript-a3e74dd813"
+  },
+  "codebase": {
+    "totals": {
+      "JavaScript": {
+        "files": 3,
+        "lines_of_code": 0,
+        "functions": 0,
+        "hard_to_maintain": 0,
+        "unmaintainable": 0
+      },
+      "TypeScript": {
+        "files": 4,
+        "lines_of_code": 27,
+        "functions": 3,
+        "hard_to_maintain": 0,
+        "unmaintainable": 0
+      }
+    },
+    "tree": {
+      "./": {
+        "entries": [
+          "dashboard/"
+        ],
+        "profile": [27, 0, 0, 0]
+      },
+      "dashboard/": {
+        "entries": [
+          "eslint.config.js",
+          "postcss.config.js",
+          "vite.config.ts",
+          "tailwind.config.js",
+          "src/"
+        ],
+        "profile": [27, 0, 0, 0]
+      },
+      "dashboard/src/": {
+        "entries": [
+          "vite-env.d.ts",
+          "lib/"
+        ],
+        "profile": [27, 0, 0, 0]
+      },
+      "dashboard/src/lib/": {
+        "entries": [
+          "chartUtils.ts",
+          "utils.ts"
+        ],
+        "profile": [27, 0, 0, 0]
+      }
+    },
+    "files": {
+      "dashboard/eslint.config.js": {
+        "checksum": "6682a8c81de9e3820ddd5b11b227b999",
+        "language": "JavaScript",
+        "loc": 0,
+        "profile": [0, 0, 0, 0],
+        "measurements": [
+        ]
+      },
+      "dashboard/postcss.config.js": {
+        "checksum": "c735540bb63936a123bc867d950c9f69",
+        "language": "JavaScript",
+        "loc": 0,
+        "profile": [0, 0, 0, 0],
+        "measurements": [
+        ]
+      },
+      "dashboard/vite.config.ts": {
+        "checksum": "580318768adc59c652bdad74b20e7797",
+        "language": "TypeScript",
+        "loc": 0,
+        "profile": [0, 0, 0, 0],
+        "measurements": [
+        ]
+      },
+      "dashboard/tailwind.config.js": {
+        "checksum": "16506eedc7741e2d213abffa8e5e51b2",
+        "language": "JavaScript",
+        "loc": 0,
+        "profile": [0, 0, 0, 0],
+        "measurements": [
+        ]
+      },
+      "dashboard/src/vite-env.d.ts": {
+        "checksum": "0352474ba2918efe13895edbc3780d94",
+        "language": "TypeScript",
+        "loc": 0,
+        "profile": [0, 0, 0, 0],
+        "measurements": [
+        ]
+      },
+      "dashboard/src/lib/chartUtils.ts": {
+        "checksum": "24cd4e592328fedb2abdb4bf5f640f80",
+        "language": "TypeScript",
+        "loc": 24,
+        "profile": [24, 0, 0, 0],
+        "measurements": [
+          {"unit_name": "getYAxisDomain", "start": {"line": 98, "column": 8}, "end": {"line": 106, "column": 2}, "value": 9},
+          {"unit_name": "hasOnlyOneValueForKey", "start": {"line": 110, "column": 17}, "end": {"line": 126, "column": 2}, "value": 15}
+        ]
+      },
+      "dashboard/src/lib/utils.ts": {
+        "checksum": "9f468c52f1fb917288a6a67ca65f7e64",
+        "language": "TypeScript",
+        "loc": 3,
+        "profile": [3, 0, 0, 0],
+        "measurements": [
+          {"unit_name": "cx", "start": {"line": 6, "column": 17}, "end": {"line": 8, "column": 2}, "value": 3}
+        ]
+      }
+    }
+  }
+}
