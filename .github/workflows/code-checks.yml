@@ -99,12 +99,12 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3.28.5
+        uses: github/codeql-action/init@v3.28.8
         with:
           languages: ${{ matrix.language }}
           queries: security-and-quality
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3.28.5
+        uses: github/codeql-action/analyze@v3.28.8
 
   run-code-limit:
     name: Run CodeLimit
@@ -140,7 +140,44 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v3.28.5
+        uses: github/codeql-action/upload-sarif@v3.28.8
         with:
           sarif_file: results.sarif
           category: zizmor
+
+  run-typescript-code-checks:
+    name: Run TypeScript Code Checks
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up Node.js with Cache
+        uses: actions/setup-node@v4.1.0
+        with:
+          node-version-file: "dashboard/package.json"
+          cache: "npm"
+          cache-dependency-path: "dashboard/package-lock.json"
+      - name: Set up Just
+        uses: extractions/setup-just@v2
+      - name: Install Dependencies
+        working-directory: dashboard
+        run: npm ci
+      - name: Run ESLint
+        env:
+          SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
+        run: just dashboard::eslint-with-sarif
+        continue-on-error: true
+      - name: Upload analysis results to GitHub
+        uses: github/codeql-action/upload-sarif@v3.28.8
+        with:
+          sarif_file: dashboard/eslint-results.sarif
+          wait-for-processing: true
+      - name: Run Prettier
+        run: just dashboard::prettier-check
+      - name: Run ESLint
+        run: just dashboard::lint

@@ -1,14 +1,16 @@
+mod dashboard 'dashboard/dashboard.just'
+
 # ------------------------------------------------------------------------------
-# Prettier - File Formatting
+# Prettier
 # ------------------------------------------------------------------------------
 
-# Check for prettier issues
+# Check if code is formatted correctly
 prettier-check:
-    prettier . --check
+    npx prettier . --check
 
-# Fix prettier issues
+# Format code with Prettier
 prettier-format:
-    prettier . --check --write
+    npx prettier . --check --write
 
 # ------------------------------------------------------------------------------
 # Justfile
@@ -17,10 +19,12 @@ prettier-format:
 # Format the Just code
 format:
     just --fmt --unstable
+    just --fmt --unstable --justfile dashboard/dashboard.just
 
 # Check for Just format issues
 format-check:
     just --fmt --check --unstable
+    just --fmt --check --unstable --justfile dashboard/dashboard.just
 
 # ------------------------------------------------------------------------------
 # Git Hooks
