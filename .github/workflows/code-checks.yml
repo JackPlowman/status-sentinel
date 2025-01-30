@@ -181,3 +181,26 @@ jobs:
         run: just dashboard::prettier-check
       - name: Run ESLint
         run: just dashboard::lint
+
+  typescript-unit-tests:
+    name: Test TypeScript Code
+    runs-on: ubuntu-latest
+    permissions:
+      statuses: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Setup Dashboard Dependencies
+        uses: ./.github/actions/setup-dashboard-dependencies
+      - name: Add Test Data
+        run: cp -r test_data/repository_statistics.json dashboard/data
+      - name: Run Unit Tests
+        run: just dashboard::unit-test-coverage
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarqube-scan-action@v4.2.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
