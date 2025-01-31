@@ -91,7 +91,7 @@ jobs:
       security-events: write
     strategy:
       matrix:
-        language: [typescript, actions]
+        language: [python, typescript, actions]
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4.2.2
