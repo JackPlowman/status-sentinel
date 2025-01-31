@@ -187,3 +187,47 @@ jobs:
         run: just dashboard::prettier-check
       - name: Run ESLint
         run: just dashboard::lint
+
+  run-python-code-checks:
+    name: Run Python Code Checks
+    runs-on: ubuntu-latest
+    permissions:
+      statuses: write
+      security-events: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up Just
+        uses: extractions/setup-just@v2
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v5.4.0
+        with:
+          python-version: 3.13
+      - name: Install Poetry
+        run: pipx install poetry==2.0.1
+      - name: Install dependencies
+        run: just tests::install
+      - name: Generate Ruff Sarif
+        run: just tests::ruff-lint-check
+        env:
+          RUFF_OUTPUT_FORMAT: "sarif"
+          RUFF_OUTPUT_FILE: "ruff-results.sarif"
+        continue-on-error: true
+      - name: Upload Ruff analysis results to GitHub
+        uses: github/codeql-action/upload-sarif@v3.28.8
+        with:
+          sarif_file: tests/ruff-results.sarif
+          wait-for-processing: true
+      - name: Validates Pyproject
+        run: just tests::pyproject-check
+      - name: Check Python Code Format (Ruff)
+        run: just tests::ruff-format-check
+        env:
+          RUFF_OUTPUT_FORMAT: "github"
+      - name: Check Python Code Linting (Ruff)
+        run: just tests::ruff-lint-check
+        env:
+          RUFF_OUTPUT_FORMAT: "github"
