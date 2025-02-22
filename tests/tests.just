@@ -4,7 +4,7 @@
 
 # Install python dependencies
 install:
-    uv install --extras dev
+    uv sync --extra dev
 
 # Install playwright dependencies
 playwright-install:
