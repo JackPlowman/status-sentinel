@@ -137,12 +137,11 @@ jobs:
           persist-credentials: false
       - name: Set up Just
         uses: extractions/setup-just@v2
-      - name: Set up Python 3.13
-        uses: actions/setup-python@v5.4.0
+      - name: Install Python and UV
+        uses: astral-sh/setup-uv@v5.2.2
         with:
-          python-version: 3.13
-      - name: Install Poetry
-        run: pipx install poetry==2.0.1
+          pyproject-file: "tests/pyproject.toml"
+          enable-cache: true
       - name: Install dependencies
         run: just tests::install
       - name: Run zizmor 🌈
