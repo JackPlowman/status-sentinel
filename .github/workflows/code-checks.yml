@@ -209,8 +209,7 @@ jobs:
         with:
           pyproject-file: "tests/pyproject.toml"
           enable-cache: true
-      - name: Install Poetry Dependencies
-        shell: bash
+      - name: Install UV Dependencies
         run: just tests::install
       - name: Generate Ruff Sarif
         run: just tests::ruff-lint-check
