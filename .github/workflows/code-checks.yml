@@ -26,7 +26,7 @@ jobs:
           persist-credentials: false
       # Lint and Format everything but Python/JavaScript/TypeScript
       - name: Lint Code Base
-        uses: super-linter/super-linter/slim@v7.2.1
+        uses: super-linter/super-linter/slim@v7.3.0
         env:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
@@ -138,7 +138,7 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@v2
       - name: Install Python and UV
-        uses: astral-sh/setup-uv@v5.2.2
+        uses: astral-sh/setup-uv@v5.3.0
         with:
           pyproject-file: "tests/pyproject.toml"
           enable-cache: true
@@ -205,7 +205,7 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@v2
       - name: Install Python and UV
-        uses: astral-sh/setup-uv@v5.2.2
+        uses: astral-sh/setup-uv@v5.3.0
         with:
           pyproject-file: "tests/pyproject.toml"
           enable-cache: true
