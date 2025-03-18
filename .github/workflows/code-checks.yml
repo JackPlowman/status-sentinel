@@ -101,13 +101,13 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3.28.10
+        uses: github/codeql-action/init@v3.28.11
         with:
           languages: ${{ matrix.language }}
           queries: security-and-quality
           config-file: .github/other-configurations/codeql-config.yml
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3.28.10
+        uses: github/codeql-action/analyze@v3.28.11
 
   run-code-limit:
     name: Run CodeLimit
@@ -138,7 +138,7 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@v2
       - name: Install Python and UV
-        uses: astral-sh/setup-uv@v5.2.2
+        uses: astral-sh/setup-uv@v5.3.1
         with:
           pyproject-file: "tests/pyproject.toml"
           enable-cache: true
@@ -149,7 +149,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v3.28.10
+        uses: github/codeql-action/upload-sarif@v3.28.11
         with:
           sarif_file: results.sarif
           category: zizmor
@@ -166,7 +166,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Set up Node.js with Cache
-        uses: actions/setup-node@v4.2.0
+        uses: actions/setup-node@v4.3.0
         with:
           node-version-file: "dashboard/package.json"
           cache: "npm"
@@ -182,7 +182,7 @@ jobs:
         run: just dashboard::eslint-with-sarif
         continue-on-error: true
       - name: Upload analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v3.28.10
+        uses: github/codeql-action/upload-sarif@v3.28.11
         with:
           sarif_file: dashboard/eslint-results.sarif
           wait-for-processing: true
@@ -205,7 +205,7 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@v2
       - name: Install Python and UV
-        uses: astral-sh/setup-uv@v5.2.2
+        uses: astral-sh/setup-uv@v5.3.1
         with:
           pyproject-file: "tests/pyproject.toml"
           enable-cache: true
@@ -218,7 +218,7 @@ jobs:
           RUFF_OUTPUT_FILE: "ruff-results.sarif"
         continue-on-error: true
       - name: Upload Ruff analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v3.28.10
+        uses: github/codeql-action/upload-sarif@v3.28.11
         with:
           sarif_file: tests/ruff-results.sarif
           wait-for-processing: true
