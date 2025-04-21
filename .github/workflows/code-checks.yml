@@ -84,7 +84,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Set up Just
-        uses: extractions/setup-just@v2
+        uses: extractions/setup-just@v3
       - name: Check Justfile Format
         run: just format-check
 
@@ -137,7 +137,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Set up Just
-        uses: extractions/setup-just@v2
+        uses: extractions/setup-just@v3
       - name: Install Python and UV
         uses: astral-sh/setup-uv@v5.2.2
         with:
@@ -173,7 +173,7 @@ jobs:
           cache: "npm"
           cache-dependency-path: "dashboard/package-lock.json"
       - name: Set up Just
-        uses: extractions/setup-just@v2
+        uses: extractions/setup-just@v3
       - name: Install Dependencies
         working-directory: dashboard
         run: npm ci
@@ -204,7 +204,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Set up Just
-        uses: extractions/setup-just@v2
+        uses: extractions/setup-just@v3
       - name: Install Python and UV
         uses: astral-sh/setup-uv@v5.2.2
         with:
