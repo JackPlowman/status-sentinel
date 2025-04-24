@@ -139,7 +139,7 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@v2
       - name: Install Python and UV
-        uses: astral-sh/setup-uv@v5.2.2
+        uses: astral-sh/setup-uv@v6.0.0
         with:
           pyproject-file: "tests/pyproject.toml"
           enable-cache: true
@@ -206,7 +206,7 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@v2
       - name: Install Python and UV
-        uses: astral-sh/setup-uv@v5.2.2
+        uses: astral-sh/setup-uv@v6.0.0
         with:
           pyproject-file: "tests/pyproject.toml"
           enable-cache: true
