@@ -65,7 +65,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Check Markdown links
-        uses: UmbrellaDocs/action-linkspector@v1.3.1
+        uses: UmbrellaDocs/action-linkspector@v1.3.4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           config_file: .github/other-configurations/.linkspector.yml
@@ -103,12 +103,12 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3.28.10
+        uses: github/codeql-action/init@v3.28.17
         with:
           languages: ${{ matrix.language }}
           queries: security-and-quality
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3.28.10
+        uses: github/codeql-action/analyze@v3.28.17
 
   run-code-limit:
     name: Run CodeLimit
@@ -162,7 +162,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Set up Node.js with Cache
-        uses: actions/setup-node@v4.2.0
+        uses: actions/setup-node@v4.4.0
         with:
           node-version-file: "dashboard/package.json"
           cache: "npm"
@@ -178,7 +178,7 @@ jobs:
         run: just dashboard::eslint-with-sarif
         continue-on-error: true
       - name: Upload analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v3.28.10
+        uses: github/codeql-action/upload-sarif@v3.28.17
         with:
           sarif_file: dashboard/eslint-results.sarif
           wait-for-processing: true
@@ -214,7 +214,7 @@ jobs:
           RUFF_OUTPUT_FILE: "ruff-results.sarif"
         continue-on-error: true
       - name: Upload Ruff analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v3.28.10
+        uses: github/codeql-action/upload-sarif@v3.28.17
         with:
           sarif_file: tests/ruff-results.sarif
           wait-for-processing: true
