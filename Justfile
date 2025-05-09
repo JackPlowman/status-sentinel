@@ -37,6 +37,18 @@ gitleaks-detect:
     gitleaks detect --source . > /dev/null
 
 # ------------------------------------------------------------------------------
+# Zizmor
+# ------------------------------------------------------------------------------
+
+# Run zizmor checking
+zizmor-check:
+    uvx zizmor . --persona=pedantic
+
+# Run zizmor checking with sarif output
+zizmor-check-sarif:
+    uvx zizmor . --persona=pedantic --format sarif > results.sarif
+
+# ------------------------------------------------------------------------------
 # Git Hooks
 # ------------------------------------------------------------------------------
 
