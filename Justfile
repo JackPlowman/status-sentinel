@@ -49,6 +49,22 @@ zizmor-check-sarif:
     uvx zizmor . --persona=pedantic --format sarif > results.sarif
 
 # ------------------------------------------------------------------------------
+# Pinact
+# ------------------------------------------------------------------------------
+
+# Run pinact
+pinact-run:
+    pinact run
+
+# Run pinact checking
+pinact-check:
+    pinact run --verify --check
+
+# Run pinact update
+pinact-update:
+    pinact run --update
+
+# ------------------------------------------------------------------------------
 # Git Hooks
 # ------------------------------------------------------------------------------
 
