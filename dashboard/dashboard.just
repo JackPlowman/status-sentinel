@@ -2,6 +2,14 @@
 # General Commands
 # ------------------------------------------------------------------------------
 
+# Install dependencies
+install:
+    npm install
+
+# Install dependencies in workflow
+ci:
+    npm ci
+
 # Lint typescript code with ESLint
 lint:
     npx eslint .
