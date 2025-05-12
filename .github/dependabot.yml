@@ -38,3 +38,21 @@ updates:
         update-types:
           - "patch"
           - "minor"
+
+  - package-ecosystem: "uv"
+    directory: "dashboard"
+    commit-message:
+      prefix: "deps(python-tests)"
+    schedule:
+      interval: "cron"
+      cronjob: "30 7 * * *"
+      timezone: "Europe/London"
+    target-branch: "main"
+    groups:
+      uv:
+        applies-to: "version-updates"
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+          - "minor"
