@@ -34,7 +34,7 @@ jobs:
           cache: "npm"
           cache-dependency-path: "dashboard/package-lock.json"
       - name: Install dependencies
-        run: rm -rf node_modules && rm -rf package-lock.json && npm install
+        run: npm ci
         working-directory: ./dashboard
       - name: Build
         run: npm run build
