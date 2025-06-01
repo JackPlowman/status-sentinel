@@ -1,7 +1,7 @@
 {
   "version": "0.18.1",
-  "uuid": "b83efc43-f2c0-4021-a6d9-ea381e0e01c9",
-  "timestamp": "2025-05-17T19:11:27+00:00",
+  "uuid": "3785f648-7937-40fa-9b65-34bbc0ba34a4",
+  "timestamp": "2025-06-01T19:36:30+00:00",
   "root": "/github/workspace",
   "repository": {
     "owner": "JackPlowman",
@@ -10,17 +10,17 @@
   },
   "codebase": {
     "totals": {
-      "TypeScript": {
-        "files": 4,
-        "lines_of_code": 27,
-        "functions": 3,
-        "hard_to_maintain": 0,
-        "unmaintainable": 0
-      },
       "JavaScript": {
         "files": 3,
         "lines_of_code": 0,
         "functions": 0,
+        "hard_to_maintain": 0,
+        "unmaintainable": 0
+      },
+      "TypeScript": {
+        "files": 4,
+        "lines_of_code": 27,
+        "functions": 3,
         "hard_to_maintain": 0,
         "unmaintainable": 0
       }
@@ -34,9 +34,9 @@
       },
       "dashboard/": {
         "entries": [
-          "vite.config.ts",
           "postcss.config.js",
           "eslint.config.js",
+          "vite.config.ts",
           "tailwind.config.js",
           "src/"
         ],
@@ -51,21 +51,13 @@
       },
       "dashboard/src/lib/": {
         "entries": [
-          "chartUtils.ts",
-          "utils.ts"
+          "utils.ts",
+          "chartUtils.ts"
         ],
         "profile": [27, 0, 0, 0]
       }
     },
     "files": {
-      "dashboard/vite.config.ts": {
-        "checksum": "875540927768710856d9185a3f90b911",
-        "language": "TypeScript",
-        "loc": 0,
-        "profile": [0, 0, 0, 0],
-        "measurements": [
-        ]
-      },
       "dashboard/postcss.config.js": {
         "checksum": "c735540bb63936a123bc867d950c9f69",
         "language": "JavaScript",
@@ -77,6 +69,14 @@
       "dashboard/eslint.config.js": {
         "checksum": "6682a8c81de9e3820ddd5b11b227b999",
         "language": "JavaScript",
+        "loc": 0,
+        "profile": [0, 0, 0, 0],
+        "measurements": [
+        ]
+      },
+      "dashboard/vite.config.ts": {
+        "checksum": "875540927768710856d9185a3f90b911",
+        "language": "TypeScript",
         "loc": 0,
         "profile": [0, 0, 0, 0],
         "measurements": [
@@ -98,6 +98,15 @@
         "measurements": [
         ]
       },
+      "dashboard/src/lib/utils.ts": {
+        "checksum": "9f468c52f1fb917288a6a67ca65f7e64",
+        "language": "TypeScript",
+        "loc": 3,
+        "profile": [3, 0, 0, 0],
+        "measurements": [
+          {"unit_name": "cx", "start": {"line": 6, "column": 17}, "end": {"line": 8, "column": 2}, "value": 3}
+        ]
+      },
       "dashboard/src/lib/chartUtils.ts": {
         "checksum": "66fc03036f7c67488e0863f2ddc5b077",
         "language": "TypeScript",
@@ -106,15 +115,6 @@
         "measurements": [
           {"unit_name": "getYAxisDomain", "start": {"line": 98, "column": 8}, "end": {"line": 106, "column": 2}, "value": 9},
           {"unit_name": "hasOnlyOneValueForKey", "start": {"line": 110, "column": 17}, "end": {"line": 128, "column": 2}, "value": 15}
-        ]
-      },
-      "dashboard/src/lib/utils.ts": {
-        "checksum": "9f468c52f1fb917288a6a67ca65f7e64",
-        "language": "TypeScript",
-        "loc": 3,
-        "profile": [3, 0, 0, 0],
-        "measurements": [
-          {"unit_name": "cx", "start": {"line": 6, "column": 17}, "end": {"line": 8, "column": 2}, "value": 3}
         ]
       }
     }
