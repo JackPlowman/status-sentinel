@@ -14,7 +14,7 @@
     "@remixicon/react": "4.6.0",
     "clsx": "2.1.1",
     "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react-dom": "19.1.0",
     "tailwind-merge": "2.6.0",
     "tailwind-variants": "0.3.1"
   },
@@ -23,7 +23,7 @@
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@tailwindcss/forms": "0.5.10",
     "@types/react": "18.3.18",
-    "@types/react-dom": "18.3.5",
+    "@types/react-dom": "19.1.5",
     "@typescript-eslint/parser": "8.22.0",
     "@vitejs/plugin-react": "4.3.4",
     "autoprefixer": "10.4.20",
