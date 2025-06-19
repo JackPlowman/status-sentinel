@@ -1,0 +1,25 @@
+name: "Setup Dependencies"
+description: "Installs dependencies for the project"
+
+inputs:
+  setup-browsers:
+    description: "Whether to set up browsers for Playwright"
+    required: false
+    default: "false"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Just
+      uses: extractions/setup-just@e33e0265a09d6d736e2ee1e0eb685ef1de4669ff # v3.0.0
+    - name: Install Python and UV
+      uses: astral-sh/setup-uv@f0ec1fc3b38f5e7cd731bb6ce540c5af426746bb # v6.1.0
+      with:
+        working-directory: tests
+    - name: Install Playwright Dependencies
+      if: ${{ inputs.setup-browsers == 'true' }}
+      shell: bash
+      run: just tests::playwright-install
+    - name: Install Python Dependencies
+      shell: bash
+      run: just tests::install
