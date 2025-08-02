@@ -1,8 +1,8 @@
-import { TrackerBreakpointsExample } from "./components/TrackerBreakpointsExample.tsx";
+import { StatusTracker } from "./components/StatusTracker.tsx";
 import "./App.css";
 
 function App() {
-  return <TrackerBreakpointsExample />;
+  return <StatusTracker />;
 }
 
 export default App;
