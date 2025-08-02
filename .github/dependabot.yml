@@ -43,7 +43,7 @@ updates:
           - "minor"
 
   - package-ecosystem: "uv"
-    directory: "dashboard"
+    directory: "tests"
     commit-message:
       prefix: "deps(python-tests)"
     schedule:
