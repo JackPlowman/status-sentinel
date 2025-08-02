@@ -4,7 +4,7 @@ updates:
   - package-ecosystem: "github-actions"
     directories:
       - "/"
-      - ".github/actions/setup-test-dependencies"
+      - ".github/actions/setup-tests-dependencies"
     commit-message:
       prefix: "deps(github-actions)"
     schedule:
