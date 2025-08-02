@@ -10,6 +10,10 @@ install:
 ci:
     npm ci
 
+# Run development server
+dev:
+    npm run dev
+
 # Lint typescript code with ESLint
 lint:
     npx eslint .
