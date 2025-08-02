@@ -43,6 +43,7 @@ jobs:
           VALIDATE_PYTHON_RUFF: false
           VALIDATE_PYTHON_PYINK: false
           VALIDATE_CSS: false
+          VALIDATE_HTML: false
           VALIDATE_JSON: false
           VALIDATE_JAVASCRIPT_ES: false
           VALIDATE_JAVASCRIPT_PRETTIER: false
