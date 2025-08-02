@@ -7,14 +7,18 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "refresh-data": "node scripts/refreshData.js",
+    "export-data": "node scripts/exportData.js"
   },
   "dependencies": {
     "@radix-ui/react-hover-card": "1.1.5",
     "@remixicon/react": "4.6.0",
+    "@sqlite.org/sqlite-wasm": "^3.50.3-build1",
     "clsx": "2.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "sql.js": "^1.13.0",
     "tailwind-merge": "2.6.0",
     "tailwind-variants": "0.3.1"
   },
@@ -24,6 +28,7 @@
     "@tailwindcss/forms": "0.5.10",
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
+    "@types/sql.js": "^1.4.9",
     "@typescript-eslint/parser": "8.22.0",
     "@vitejs/plugin-react": "4.3.4",
     "autoprefixer": "10.4.20",

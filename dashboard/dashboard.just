@@ -6,6 +6,10 @@
 install:
     npm install
 
+# Run development server
+dev:
+    npm run dev
+
 # Install dependencies in workflow
 ci:
     npm ci
