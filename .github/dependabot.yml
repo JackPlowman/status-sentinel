@@ -4,13 +4,15 @@ updates:
   - package-ecosystem: "github-actions"
     directories:
       - "/"
-      - ".github/actions/setup-tests-dependencies"
+      - "/.github/actions/setup-tests-dependencies"
     commit-message:
       prefix: "deps(github-actions)"
     schedule:
       interval: "cron"
       cronjob: "30 7 * * *"
       timezone: "Europe/London"
+    cooldown:
+      default-days: 7
     target-branch: "main"
     groups:
       github-actions:
@@ -24,13 +26,15 @@ updates:
           - "minor"
 
   - package-ecosystem: "npm"
-    directory: "dashboard"
+    directory: "/dashboard"
     commit-message:
       prefix: "deps(typescript)"
     schedule:
       interval: "cron"
       cronjob: "30 7 * * *"
       timezone: "Europe/London"
+    cooldown:
+      default-days: 7
     target-branch: "main"
     groups:
       typescript:
@@ -42,13 +46,15 @@ updates:
           - "minor"
 
   - package-ecosystem: "uv"
-    directory: "tests"
+    directory: "/tests"
     commit-message:
       prefix: "deps(python-tests)"
     schedule:
       interval: "cron"
       cronjob: "30 7 * * *"
       timezone: "Europe/London"
+    cooldown:
+      default-days: 7
     target-branch: "main"
     groups:
       uv:
