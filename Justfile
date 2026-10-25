@@ -7,11 +7,11 @@ mod tests 'tests/tests.just'
 
 # Check if code is formatted correctly
 prettier-check:
-    npx prettier . --check
+    npx --yes prettier@3.9.10 . --check
 
 # Format code with Prettier
 prettier-format:
-    npx prettier . --check --write
+    npx --yes prettier@3.9.10 . --check --write
 
 # ------------------------------------------------------------------------------
 # Justfile
@@ -42,7 +42,7 @@ gitleaks-detect:
 
 # Run prek checking on all pre-commit config files
 prek-check:
-    find . -name "pre-commit-config.*" -exec prek validate-config -c {} \;
+    prek validate-config .pre-commit-config.yaml
 
 # ------------------------------------------------------------------------------
 # Zizmor
@@ -80,17 +80,13 @@ install-git-hooks:
 # Prek
 # ------------------------------------------------------------------------------
 
-# Update prek hooks and additional dependencies
+# Update prek hooks
 prek-update:
     just prek-update-hooks
-    just prek-update-additional-dependencies
 
 # Prek update hooks
 prek-update-hooks:
-    prek autoupdate
-
-prek-update-additional-dependencies:
-    uv run --script https://raw.githubusercontent.com/JackPlowman/update-prek-additional-dependencies/refs/heads/main/update_prek_additional_dependencies.py
+    uvx prek==0.5.7 update --freeze
 
 # ------------------------------------------------------------------------------
 # Update All Tools
@@ -100,4 +96,3 @@ prek-update-additional-dependencies:
 update:
     just pinact-update
     just prek-update
-    just prek-update-additional-dependencies

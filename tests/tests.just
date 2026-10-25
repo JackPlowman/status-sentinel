@@ -14,7 +14,7 @@ install:
 
 # Run End-to-End Tests
 run $PROJECT_URL=DEFAULT_PROJECT_URL $browser="chromium":
-    uv run pytest ui -vv --reruns 2 --browser ${browser}
+    uv run pytest ui -vv --browser ${browser}
 
 # Run End-to-End Tests with dashboard running locally
 run-local $project_url="TODO":
