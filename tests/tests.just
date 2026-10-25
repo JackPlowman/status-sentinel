@@ -10,11 +10,11 @@ export DEFAULT_PROJECT_URL := "https://jackplowman.github.io/status-sentinel"
 
 # Install All Python Dependencies
 install:
-    uv sync --all-extras
+    uv sync --locked --no-build --all-extras
 
 # Run End-to-End Tests
 run $PROJECT_URL=DEFAULT_PROJECT_URL $browser="chromium":
-    uv run pytest ui -vv --browser ${browser}
+    uv run --locked --no-build pytest ui -vv --browser ${browser}
 
 # Run End-to-End Tests with dashboard running locally
 run-local $project_url="TODO":
@@ -26,7 +26,7 @@ run-ci $browser:
 
 # Install playwright dependencies
 playwright-install:
-    uv run playwright install --with-deps
+    uv run --locked --no-build playwright install --with-deps
 
 # Remove all compiled Python files
 clean:
@@ -59,19 +59,19 @@ ruff-checks:
 
 # Check for Ruff issues
 ruff-lint-check:
-    uv run ruff check ui
+    uv run --locked --no-build ruff check ui
 
 # Fix Ruff lint issues
 ruff-lint-fix:
-    uv run ruff check ui --fix --unsafe-fixes
+    uv run --locked --no-build ruff check ui --fix --unsafe-fixes
 
 # Check for Ruff format issues
 ruff-format-check:
-    uv run ruff format --check ui
+    uv run --locked --no-build ruff format --check ui
 
 # Fix Ruff format issues
 ruff-format-fix:
-    uv run ruff format ui
+    uv run --locked --no-build ruff format ui
 
 # ------------------------------------------------------------------------------
 # Ty - Python Type Checking
@@ -79,7 +79,7 @@ ruff-format-fix:
 
 # Check for type issues with Ty
 ty-check:
-    uv run ty check .
+    uv run --locked --no-build ty check .
 
 # ------------------------------------------------------------------------------
 # Other Python Tools

@@ -65,7 +65,7 @@ jobs:
           just-version: "1.59.0"
       - name: Install Dependencies
         working-directory: dashboard
-        run: npm ci
+        run: npm ci --ignore-scripts
       - name: Run ESLint
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
@@ -82,7 +82,7 @@ jobs:
       - name: Set up browser test dependencies
         uses: $/.github/actions/setup-tests-dependencies
       - name: Install Chromium
-        run: uv run --project tests playwright install --with-deps chromium
+        run: uv run --locked --no-build --project tests playwright install --with-deps chromium
       - name: Test Dashboard in Chromium
         env:
           PROJECT_URL: http://127.0.0.1:4173/status-sentinel/
@@ -96,7 +96,7 @@ jobs:
             fi
             sleep 1
           done
-          uv run --project tests pytest tests/ui -q
+          uv run --locked --no-build --project tests pytest tests/ui -q
       - name: Run Prettier
         run: just dashboard::prettier-check
       - name: Run ESLint
